@@ -9,7 +9,7 @@ module TitleThis
   end
 
   def self.array(array)
-    array.map(&:capitalize).join(' ')
+    array.map(&:to_s).collect(&:capitalize).join(' ')
   end
 
   def self.hash(hash, key)
