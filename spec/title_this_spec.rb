@@ -9,8 +9,13 @@ describe TitleThis do
   end
 
   it 'works on Arrays' do
-    array = %w(here are words)
+    array = %w[here are words]
     expect(TitleThis.array(array)).to eql('Here Are Words')
+  end
+
+  it 'works with mixed content Arrays' do
+    array = [false, 1, 'here', 'is', 1, 'word']
+    expect(TitleThis.array(array)).to eql('False 1 Here Is 1 Word')
   end
 
   it 'works on Hashes' do
