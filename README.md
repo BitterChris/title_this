@@ -1,8 +1,7 @@
 # TitleThis
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/title_this`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+TitleThis can be used to turn any String, Array, or key in a Hash into a titleized version of itself. This isn't anything fancy and ignores any
+results of titleization. It just returns a capitalized String.
 
 ## Installation
 
@@ -22,18 +21,37 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+#### String#title_this
 
-## Development
+Calling `.title_this` on any String object will capitalize each word and return it.
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+```ruby
+>> sentence = "this is my title"
+>> sentence.title_this
+=> "This Is My Title"
+```
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+#### Array#title_this
 
-## Contributing
+Calling `.title_this` on any Array will cast all contents to String, capitalize them, and return a joined String.
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/title_this.
+```ruby
+>> arr = ['this', 'is', 'my', 'title']
+>> arr.title_this
+=> "This Is My Title"
+```
 
+#### Hash#title_this(key)
+
+Calling `.title_this(key)` on a Hash will find the proper value for the key passed, cast its contents to String, then capitalize each word before returning a joined String.
+
+If `key` is not present within the Hash it will return `nil`. 
+
+```ruby
+>> hash = { sentence: 'this is my title' }
+>> hash.title_this(sentence)
+=> "This Is My Title"
+```
 
 ## License
 
