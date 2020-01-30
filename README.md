@@ -6,6 +6,8 @@ that do similar things.
 
 ## Installation
 
+(none of this will work yet I don't think, you'll need to add `gem 'title_this', git: 'https://github.com/BitterChris/title_this'` to your Gemfile)
+
 Add this line to your application's Gemfile:
 
 ```ruby
