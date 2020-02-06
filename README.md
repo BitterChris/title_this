@@ -1,7 +1,7 @@
 # TitleThis
 
 TitleThis can be used to turn any String, Array, or key in a Hash into a titleized version of itself. This isn't anything fancy and ignores any
-results of titleization. It just returns a capitalized String. This is really just for educational purposes. There are much better gems out there
+normal standards of titleization. It just returns a capitalized String. This is really just for educational purposes. There are much better gems out there
 that do similar things.
 
 ## Installation
